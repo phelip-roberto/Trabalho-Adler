@@ -6,4 +6,4 @@ Ana -
 Fábio - Check
 Phelip - Check
 Rafael - 
-Vágner - 
+Vágner - Check
