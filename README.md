@@ -23,4 +23,4 @@ Class automovel -
 Essa classe representa o cadastro do tipo, marca, modelo, cor, ano, potência, consumo, nivel do tanque, e o combustível utilizado com relação ao automóvel. -
 
 Class Combustível -
-Essa classe representa o cadastrocom relação ao tipo do combustivel. -
+Essa classe representa o cadastro com relação ao tipo do combustivel. -
