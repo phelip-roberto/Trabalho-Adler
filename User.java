@@ -8,7 +8,7 @@ public class User
 	private int control1, control2, control3; //variavel para controle do set
 	private ArrayList<Automovel> listAuto;
 
-	public void Usuario(String na, String us, String ns, String cp, String pw, String em, String tel)
+	public User(String na, String us, String ns, String cp, String pw, String em, String tel)
 	{
 		name = na;
 		user = us;
