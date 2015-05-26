@@ -5,5 +5,5 @@ Quem conseguir ler esse readme da um check abaixo!
 Ana - 
 Fábio - 
 Phelip - Check
-Rafael - 
+Rafael - Check
 Vágner - Check
