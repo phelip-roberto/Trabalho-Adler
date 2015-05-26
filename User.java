@@ -8,7 +8,7 @@ public class User
 	private int control1, control2, control3; //variavel para controle do set
 	private ArrayList<Automovel> listAuto;
 
-	public User(String na, String us, String ns, String cp, String pw, String em, String tel)
+	public void User(String na, String us, String ns, String cp, String pw, String em, String tel)
 	{
 		name = na;
 		user = us;
@@ -70,7 +70,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).modelo == search)
+			if(listAuto.get(i).getModelo == search)
 				return i;
 		}
 		return -1;
@@ -82,7 +82,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).marca == search)
+			if(listAuto.get(i).getMarca == search)
 				return i;
 		}
 		return -1;
@@ -94,7 +94,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).tipo == search)
+			if(listAuto.get(i).getTipo == search)
 				return i;
 		}
 		return -1;
@@ -102,22 +102,22 @@ public class User
 
 	public void changeAutoCor(int pos, String newdata)
 	{
-		listAuto.get(pos).cor = newdata;
+		listAuto.get(pos).getCor = newdata;
 	}
 
 	public void changeAutoComb(int pos, Combustivel newdata)
 	{
-		listAuto.get(pos).comb = newdata;
+		listAuto.get(pos).getComb = newdata;
 	}
 
 	public void changeAutoHardware(int pos, boolean newdata)
 	{
-			listAuto.get(pos).hardware = newdata;
+			listAuto.get(pos).isHardware = newdata;
 	}
 	
 	public void removeAuto(int pos)
 	{//remove o automovel pelo seu tipo, deve ser informada a sua posicao
-		if(listAuto.get(pos).hardware)
+		if(listAuto.get(pos).isHardware)
 		{
 			System.out.println("O automovel possui o hardware implantado, a remocao ira impedir a comunicacao do aplicativo com o sistema embarcado. As seguintes funcionalidades serao desabilitadas: medir a temperatura do motor, medir nivel do tanque e seus respectivos relatorios.	Ciente destas informacoes, deseja prosseguir com a remocao do automovel?");
 			System.out.println("1 -> SIM 					2 -> NAO");
