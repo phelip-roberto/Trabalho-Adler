@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Automovel{
@@ -5,40 +6,48 @@ public class Automovel{
 	private int ano;
 	private float potencia, consumo, nivelTanque;
 	private boolean hardware;
-	private combustivel comb;
+	private Combustivel comb[] = new Combustivel[3];
 }
 
-public Automovel(String tipo, String marca, String modelo, String cor, int ano, float potencia, float consumo, float nivelTanque, boolean hardware, combustivel comb){
+public Automovel(String tipo, String marca, String modelo, String cor, int ano, float potencia, float consumo, float nivelTanque, boolean hardware, Combustivel comb){
 	this.tipo = tipo;
     this.marca = marca;
     this.modelo = modelo;
     this.cor = cor;
     this.ano = ano;
-    this.comb = comb;
     this.potencia = potencia;
     this.consumo = consumo;
     this.nivelTanque = nivelTanque;
     this.hardware = hardware;
+    this.comb = comb;
 }
 
 public String getTipo() {
     return tipo;
 }
-    
-public void setTipo(String tipo) {
-    this.tipo = tipo;
+
+public String getMarca(){
+	return marca;
 }
 
+public String getModelo(){
+	return modelo;
+}
+
+public String getCor(){
+	return cor;
+}
+
+public void setCor(String cor){
+	this.cor = cor;
+}
+    
 public int getAno() {
     return ano;
 }
 
 public float getPotencia() {
     return potencia;
-}
-
-public void setPotencia(float potencia) {
-    this.potencia = potencia;
 }
 
 public float getConsumo() {
@@ -49,16 +58,20 @@ public float getNivelTanque() {
     return nivelTanque;
 }
 
-public void setNivelTanque(float nivelTanque) {
-    this.nivelTanque = nivelTanque;
-}
-
 public boolean isHardware() {
     return hardware;
 }
 
 public void setHardware(boolean hardware) {
     this.hardware = hardware;
+}
+
+public String getCombustivel(){
+	return comb;
+}
+
+public void setCombustivel(String comb){
+	this.comb = comb;
 }
 
 public void checarTemp(){
@@ -74,28 +87,53 @@ public void checarTemp(){
 	}
 }
 
-/*public void excluirAutom(String tipo){
-	Scanner sc = new Scanner(System.in);	
-	if(!hardware){
-		System.out.println("Não é possível excluir um automóvel com hardware. Deseja excluir o hardware? S(Sim)/N(Não)");
-		Char c = (char)System.in.read();
-		if(c == S) ...
-		if(c == N) ...
-	}
-}*/
-
-/*public void checarNivelTanque(){
+public void checarNivelTanque(){
 	Random tanque - new Random();
 	float nivel = tanque.nextFloat();
-	if(nivel == 100)
-		System.out.println("Tanque cheio!");
+	if((nivel<=100)&&(nivel>=95))
+		System.out.println("Tanque cheio: %f", );
 	else{
-		if((nivel>=60) &&(nivel<=95))
+		if((nivel>=60) &&(nivel<95))
+			System.out.println("Nível do tanque Normal: %f", nivel);
+		else
+			System.out.println("Nível do tanque: Baixo: %f", nivel);
+
 	}
-}*/
+}
 
+public void createCombust(String t, float p){
+	Combustivel c = new Combustivel(String t, float p); //tipo e preço
+	comb.adiciona(c);
+}
 
+public int searchCombust(String tipoComb){ 
+	int i;
+	for(i=0; i<2; i++){
+		if(comb(i).getTipo == tipoComb)
+			return i;
+	}
+	return -1;
+}
 
+public void editCombust(String t, float p){ //novo preço
+	int x = searchCombust(t);
+	if (x == -1) 
+		System.out.println("\n---Combustivel Inválido---\n");
+	else{
+		comb[i].setPreco(p);
+		System.out.println("\nPreço alterado com sucesso.\n");
+	}
+}
+
+public void removeCombust(String t){
+	int pos = searchCombust(t);
+	if (pos == -1) 
+		System.out.println("\n---Combustível Inválido---\n");
+	else{
+		comb.remove(pos);
+		System.out.println("\nCombustível removido com sucesso.\n");
+	}
+}
 
 
 
