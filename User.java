@@ -24,7 +24,7 @@ public class User
 	public void setName(String no)
 	{
 		if(this.control1 < 5) //o usuário só poderá alterar seu nome 5 vezes
-			this.nome = no;
+			this.name = no;
 		else
 			System.out.println("Não é possível alterar o nome!");
 		this.control1++;
