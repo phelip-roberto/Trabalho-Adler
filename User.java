@@ -70,7 +70,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).getModelo == search)
+			if(listAuto.get(i).getModelo.equals(search))
 				return i;
 		}
 		return -1;
@@ -82,7 +82,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).getMarca == search)
+			if(listAuto.get(i).getMarca.equals(search))
 				return i;
 		}
 		return -1;
@@ -94,7 +94,7 @@ public class User
 		int i;
 		for(i = 0; i < listAuto.size; i++)
 		{
-			if(listAuto.get(i).getTipo == search)
+			if(listAuto.get(i).getTipo.equals(search))
 				return i;
 		}
 		return -1;
