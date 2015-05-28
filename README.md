@@ -2,7 +2,7 @@
 Trabalho Adler 
 Teste....
 Quem conseguir ler esse readme da um check abaixo!
-Ana - 
+Ana - Check
 Fábio - 
 Phelip - Check
 Rafael - Check
