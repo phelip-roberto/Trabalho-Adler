@@ -19,7 +19,7 @@ public class Automovel{
         this.consumo = consumo;
         this.nivelTanque = nivelTanque;
         this.hardware = hardware;
-        listComb = new ArrayList<Combustivel>();
+        listComb = new ArrayList <Combustivel>();
     }
 
     public String getTipo() {
@@ -66,60 +66,40 @@ public class Automovel{
         this.hardware = hardware;
     }
 
-    /*public String getCombustivel(){
-    	return comb[0];
+    public String getCombustivel(int n){
+    	return listComb[n].tipo;
     }
 
-    public void setCombustivel(String comb){
-		this.comb = comb;
-    }*/
+    public void setCombustivel(String tipo, int n){
+		this.listComb[n].tipo = tipo;
+    }
+    
 
     public void checarTemp(){
 		Random motor = new Random();
 		float temp = motor.nextFloat();
 		if(temp > 90)
-			System.out.println("---Temperatura elevada!--- " + temp +" celsius");
+			System.out.println("---Temperatura elevada!---  " + temp +" celsius");
 		else{
 			if(temp < 85)
-				System.out.println("---Temperatura baixa!---" + temp + "celsius");
+				System.out.println("---Temperatura baixa!---  " + temp + "celsius");
 			else
-				System.out.println("Temperatura normal" + temp + "celsius"); 
+				System.out.println("Temperatura normal!  " + temp + "celsius"); 
     	}
     }
 
     public void checarNivelTanque(){
-		Random tanque = new Random();
-		float nivel = tanque.nextFloat();
-		if(nivel>=95)
-			System.out.println("Tanque cheio:" + nivel);
-		else{
-			if((nivel>=60) &&(nivel<95))
-				System.out.println("Nível do tanque Normal" +nivel);
-			else
-				System.out.println("Nível do tanque Baixo" +nivel); //System.out.println
-
-		}
+        float nivel = Math.random();
+        if (nivel>=95)
+            System.out.println("Tanque cheio: " + nivel);
+        else{
+            if(nivel>=60 && nivel<95)
+                System.out.println("Nível do tanque Normal: " +nivel);
+            else
+                System.out.println("Nível do tanque Baixo: " +nivel);
+        }
     }   
 
-    /*public void menuEdit(){
-		System.out.println("\nQual dado você deseja alterar?\n");
-		System.out.println("1-Cor\n2-Hardware(S/N)\n2-Combustivel\n");
-		Scanner ler = new Scanner(System.in);
-		int n = sc.nextInt();
-		Switch (n) {
-			case 1:
-				editCor();
-				break;
-			case 2:
-				editHardware();
-				break;
-			case 3:
-				editCombustivel(comb1, comb2);
-				break;
-			default:
-				System.out.println("\n--OPÇÃO INVÁLIDA!--");
-		}
-    }*/
 
     public void createCombust(String t, float p){
 		Combustivel c = new Combustivel(t,p); //tipo e preço
@@ -129,7 +109,7 @@ public class Automovel{
     public int searchCombust(String tipoComb){ 
 		int pos;
 		for(pos=0; pos<2; pos++){
-			if(listComb.get(pos).getMarca == tipoComb)
+			if(listComb.get(pos).getTipo == tipoComb)
                 return pos;
         	}
 		return -1;
@@ -140,7 +120,7 @@ public class Automovel{
 		if (pos == -1) 
 			System.out.println("\n---Combustivel Inválido---\n");
 		else{
-			listComb.get(pos).setPreco(p);
+			listComb.get(pos).setPrecoComb(p);
 			System.out.println("\nPreço alterado com sucesso.\n");
 		}
     }
