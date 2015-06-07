@@ -8,7 +8,12 @@ Phelip - Check
 Rafael - Check
 Vágner - Check
 
+linha de comando do github
 
+git add nome_do_arquivo.tipo
+git commit
+git push manda pro github.com
+git pull atualiza o desktop
 
 /////////////////////////////////////
 /////////////////////////////////////
