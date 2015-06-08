@@ -12,22 +12,12 @@ import android.text.InputType;
 
 
 
-public class MainActivity extends Activity {
+public class Menu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button entrar = (Button) findViewById(R.id.Entrar);
-        Button criar = (Button) findViewById(R.id.Criar_User);
-        entrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent itEntrar = new Intent(MainActivity.this, Menu.class);
-                startActivity(itEntrar);
-            }
-        });
-
     }
 
     @Override
