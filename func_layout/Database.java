@@ -167,6 +167,25 @@ public class Database extends SQLiteOpenHelper{
         return lista;
     }
 
+    public ArrayList<String> automovelPos(int pos){
+        String sql =("SELECT * from automoveis limit "+pos+",1");
+        Cursor cursor = getReadableDatabase().rawQuery(sql, null);
+        ArrayList<String> info = new ArrayList<>();
+        if(cursor.getCount() != 0) {
+            cursor.moveToFirst();
+            info.add(cursor.getString(cursor.getColumnIndex("modelo")));
+            info.add(cursor.getString(cursor.getColumnIndex("tipo")));
+            info.add(cursor.getString(cursor.getColumnIndex("marca")));
+            info.add(cursor.getString(cursor.getColumnIndex("ano")));
+            info.add(cursor.getString(cursor.getColumnIndex("cor")));
+            info.add(cursor.getString(cursor.getColumnIndex("potencia")));
+            info.add(cursor.getString(cursor.getColumnIndex("consumo")));
+            info.add(cursor.getString(cursor.getColumnIndex("capacidade")));
+            info.add(cursor.getString(cursor.getColumnIndex("hardware")));
+        }
+        return info;
+    }
+
     public void addAutomovel(String modelo,String tipo,String marca,int ano,String cor,float potencia, float consumo, float capacidade, int hardware){
 
         ContentValues entry = new ContentValues();
@@ -176,6 +195,7 @@ public class Database extends SQLiteOpenHelper{
         entry.put("ano", ano);
         entry.put("cor", cor);
         entry.put("potencia", potencia);
+        entry.put("capacidade", capacidade);
         entry.put("consumo", consumo);
         entry.put("hardware", hardware);
             try {

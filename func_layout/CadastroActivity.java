@@ -30,8 +30,8 @@ public class CadastroActivity extends ActionBarActivity {
         final EditText txt_email = (EditText) findViewById(R.id.txt_email_cad);
         final EditText txt_telefone = (EditText) findViewById(R.id.txt_tel_cad);
 
-        Button bt_cadastrar = (Button) findViewById(R.id.bt1_cadastrar_cad);
-        Button bt_limpar = (Button) findViewById(R.id.bt2_limpar_cad);
+        Button bt_cadastrar = (Button) findViewById(R.id.bt_cadastrar_cad);
+        Button bt_limpar = (Button) findViewById(R.id.bt_limpar_cad);
 
         bt_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
