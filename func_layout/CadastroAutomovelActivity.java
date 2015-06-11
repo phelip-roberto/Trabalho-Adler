@@ -1,6 +1,5 @@
 package unifei.edu.br.techcar;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,10 +20,9 @@ public class CadastroAutomovelActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cadastro_automovel);
 
         db = new Database(this);
-
-        setContentView(R.layout.activity_cadastro_automovel);
 
         final EditText txt_modelo = (EditText) findViewById(R.id.txt_modelo_cad_auto);
         final EditText txt_ano = (EditText) findViewById(R.id.txt_ano_cad_auto);
@@ -46,11 +44,11 @@ public class CadastroAutomovelActivity extends ActionBarActivity {
         sp_tipo.setAdapter(adapter_tipo);
 
         ArrayAdapter<CharSequence> adapter_marca = ArrayAdapter.createFromResource(this, R.array.marcas, android.R.layout.simple_spinner_item);
-        adapter_tipo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter_marca.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_marca.setAdapter(adapter_marca);
 
-        ArrayAdapter<CharSequence> adapter_hardware = ArrayAdapter.createFromResource(this, R.array.hardware, android.R.layout.simple_spinner_item);
-        adapter_tipo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter_hardware = ArrayAdapter.createFromResource(this, R.array.hardwares, android.R.layout.simple_spinner_item);
+        adapter_hardware.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_hardware.setAdapter(adapter_hardware);
 
         btcadastrar.setOnClickListener(new View.OnClickListener() {
