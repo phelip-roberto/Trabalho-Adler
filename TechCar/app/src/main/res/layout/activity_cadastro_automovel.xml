@@ -42,8 +42,7 @@
             android:inputType="text"
             android:layout_weight="1"
             android:hint="Modelo"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_modelo_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -53,8 +52,7 @@
             android:inputType="numberSigned"
             android:layout_weight="1"
             android:hint="Ano"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_ano_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -64,8 +62,7 @@
             android:inputType="text"
             android:layout_weight="1"
             android:hint="Cor"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_cor_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -75,8 +72,7 @@
             android:inputType="numberDecimal"
             android:layout_weight="1"
             android:hint="Potencia"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_potencia_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -86,8 +82,7 @@
             android:inputType="numberDecimal"
             android:layout_weight="1"
             android:hint="Consumo"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_consumo_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -97,8 +92,7 @@
             android:inputType="numberDecimal"
             android:layout_weight="1"
             android:hint="Capacidade"
-            android:layout_marginTop="15dp"
-            android:text="@string/txt_capacidade_cadastro_automovel" />
+            android:layout_marginTop="15dp" />
 
         <Spinner
             android:layout_width="fill_parent"

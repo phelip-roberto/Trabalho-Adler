@@ -27,8 +27,7 @@
             android:id="@+id/txt_nome_cad"
             android:layout_marginTop="15dp"
             android:hint="Nome"
-            android:singleLine="true"
-            android:text="@string/txt_nome_cadastro" />
+            android:singleLine="true" />
 
         <EditText
         android:layout_width="fill_parent"
@@ -36,8 +35,7 @@
         android:id="@+id/txt_login_cad"
         android:hint="Login"
             android:layout_marginTop="25dp"
-            android:singleLine="true"
-            android:text="@string/txt_login_cadastro" />
+            android:singleLine="true" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -46,8 +44,7 @@
             android:id="@+id/txt_senha_cad"
             android:layout_marginTop="15dp"
             android:hint="Senha"
-            android:singleLine="true"
-            android:text="@string/txt_senha_cadastro" />
+            android:singleLine="true" />
 
 
     <EditText
@@ -58,8 +55,7 @@
         android:id="@+id/txt_nascimento_cad"
         android:layout_marginTop="15dp"
         android:hint="Data de Nascimento"
-        android:singleLine="true"
-        android:text="@string/txt_nascimento_cadastro" />
+        android:singleLine="true" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -68,8 +64,7 @@
             android:id="@+id/txt_cpf_cad"
             android:layout_marginTop="15dp"
             android:hint="CPF"
-            android:singleLine="true"
-            android:text="@string/txt_cpf_cadastro" />
+            android:singleLine="true" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -78,8 +73,7 @@
             android:id="@+id/txt_email_cad"
             android:layout_marginTop="15dp"
             android:hint="Email"
-            android:singleLine="true"
-            android:text="@string/txt_email_cadastro" />
+            android:singleLine="true" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -88,8 +82,7 @@
             android:layout_marginTop="15dp"
             android:inputType="number"
             android:hint="Telefone"
-            android:singleLine="true"
-            android:text="@string/txt_telefone_cadastro" />
+            android:singleLine="true" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="horizontal"

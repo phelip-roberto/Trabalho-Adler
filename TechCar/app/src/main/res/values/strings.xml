@@ -51,27 +51,10 @@
     TextView
     <string name="text_titulo_cadastro">CADASTRAR USUÁRIO</string>
 
-    EditText
-    <string name="txt_nome_cadastro">Nome</string>
-    <string name="txt_login_cadastro">Login</string>
-    <string name="txt_senha_cadastro">Senha</string>
-    <string name="txt_nascimento_cadastro">Data de nascimento</string>
-    <string name="txt_cpf_cadastro">CPF</string>
-    <string name="txt_email_cadastro">Email</string>
-    <string name="txt_telefone_cadastro">Telefone</string>
-
     <string name="title_activity_cadastro_automovel">Cadastro de automóvel</string>
 
     TextView
     <string name="text_titulo_cadastro_automovel">CADASTRAR AUTOMÓVEL</string>
-
-    EditText
-    <string name="txt_modelo_cadastro_automovel">Modelo</string>
-    <string name="txt_ano_cadastro_automovel">Ano</string>
-    <string name="txt_cor_cadastro_automovel">Cor</string>
-    <string name="txt_potencia_cadastro_automovel">Potência</string>
-    <string name="txt_consumo_cadastro_automovel">Consumo</string>
-    <string name="txt_capacidade_cadastro_automovel">Capacidade</string>
 
     <string name="title_activity_equipe">Equipe</string>
 
