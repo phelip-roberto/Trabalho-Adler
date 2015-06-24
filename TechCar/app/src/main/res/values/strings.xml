@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">TechCar</string>
+    <string name="title_activity_login">Login</string>
+    <string name="db_name">"Tech Car"</string>
+
+    <string name="preference_autologin">unifei.edu.br.techcar.AUTOLOGIN</string>
+    <string name="autologin_status">unifei.edu.br.techcar.AUTOLOGINSTATUS</string>
+    <string name="autologin_login">unifei.edu.br.techcar.LOGINNAME</string>
+
+    <string name="Database_onCreate">"
+        CREATE TABLE usuarios (login TEXT PRIMARY KEY, nome TEXT, nascimento TEXT, cpf TEXT, senha TEXT, email TEXT, telefone TEXT)\nCREATE TABLE automoveis (modelo TEXT PRIMARY KEY, tipo TEXT, marca TEXT, ano INTEGER, cor TEXT, potencia REAL, consumo REAL, capacidade REAL, hardware INTEGER, login TEXT)
+        "</string>
+
+    <string name="Database_onUpgrade">"
+        DROP TABLE IF EXISTS usuarios\nDROP TABLE IF EXISTS automoveis
+"</string>
+
+    <string name="title_activity_list_automovel">Lista de automóveis</string>
+
+    <string-array name="tipos">
+        <item>Caminhão</item>
+        <item>Carro</item>
+        <item>Moto</item>
+        <item>Van</item>
+    </string-array>
+
+    <string-array name="marcas">
+        <item>BMW</item>
+        <item>Chevrolet</item>
+        <item>Ferrari</item>
+        <item>Ford</item>
+    </string-array>
+
+    <string-array name="hardwares">
+        <item>Ativo</item>
+        <item>Inativo</item>
+    </string-array>
+
+    <string name="title_activity_info">Informações veículo</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_team">Equipe</string>
+    <string name="action_editar_usuario">Editar usuário</string>
+    <string name="action_remover_usuario">Remover usuário</string>
+    <string name="action_logout_usuario">Logout</string>
+    <string name="action_editar_automovel">Editar automóvel</string>
+    <string name="action_remover_automovel">Remover automóvel</string>
+
+    <string name="title_activity_cadastro">Cadastro usuário</string>
+
+    TextView
+    <string name="text_titulo_cadastro">CADASTRAR USUÁRIO</string>
+
+    <string name="title_activity_cadastro_automovel">Cadastro de automóvel</string>
+
+    TextView
+    <string name="text_titulo_cadastro_automovel">CADASTRAR AUTOMÓVEL</string>
+
+    <string name="title_activity_equipe">Equipe</string>
+
+    TextView
+    <string name="text_titulo_equipe">EQUIPE</string>
+    <string name="text_unifei">UNIFEI - Universidade federal de Itajubá 2015</string>
+
+    Button
+    <string name="bt_cadastrar">Cadastrar</string>
+    <string name="bt_limpar">Limpar</string>
+
+    Geral
+
+    TextView
+    <string name="text_hardware_on">Ativo</string>
+    <string name="text_hardware_off">Inativo</string>
+
+    Mensagens
+    <string name="mensagem_campos_vazios">Campo(s) vazio(s)</string>
+    <string name="mensagem_campos_1">Preencga ao menos um campo</string>
+    <string name="mensagem_usuario_cadastro">Usuário cadastrado com sucesso</string>
+    <string name="mensagem_usuario_existente">Usuário existente</string>
+    <string name="mensagem_usuario_invalido">Usuário invalido</string>
+    <string name="mensagem_usuario_senha_invalida">Senha incorreta</string>
+    <string name="mensagem_usuario_remover">Usuário removido com sucesso</string>
+    <string name="mensagem_usuario_confirmar">Deseja remover sua conta ? Todos os usuários seram removidos e o hardware desconectado</string>
+    <string name="mensagem_automovel_cadastro">Automóvel cadastrado com sucesso</string>
+    <string name="mensagem_automovel_editar">Automóvel editado com sucesso</string>
+    <string name="mensagem_automovel_remover">Automóvel removido com sucesso</string>
+    <string name="mensagem_automovel_confirmar">Deseja remover sua automóvel ?</string>
+    <string name="mensagem_distancia_vazia">Preencha o campos distância</string>
+    <string name="mensagem_logout_confirmar">Deseja realizar logout ?</string>
+
+    Mesagens titulo
+    <string name="mensagem_titulo_informacoes">Informações</string>
+    <string name="mensagem_titulo_resultado">Resultado</string>
+    <string name="mensagem_titulo_configuracoes">Configurações</string>
+    <string name="mensagem_titulo_logout">Logout</string>
+
+    Mensagens botões
+    <string name="mensagem_botao_confirmar">Confirmar</string>
+    <string name="mensagem_botao_calcular">Calcular</string>
+    <string name="mensagem_botao_cancelar">Cancelar</string>
+
+</resources>
