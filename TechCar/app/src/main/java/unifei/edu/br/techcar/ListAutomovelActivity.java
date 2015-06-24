@@ -112,13 +112,13 @@ public class ListAutomovelActivity extends ActionBarActivity {
                             // Verificar se existem campos vazios
                             if (!senha.isEmpty() || !email.isEmpty() || !telefone.isEmpty()) {
                                 db.editarUsuario(senha, email, telefone, getLogin());
-                                Toast.makeText(getApplicationContext(), "Usuário alterado com sucesso", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.mensagem_usuario_alterar, Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(getApplicationContext(), R.string.mensagem_campos_1, Toast.LENGTH_SHORT).show();
                             }
                         }
                     })
-                    .setNegativeButton("Cancelar", null)
+                    .setNegativeButton(R.string.mensagem_botao_cancelar, null)
                     .show();
         }
 
@@ -142,7 +142,7 @@ public class ListAutomovelActivity extends ActionBarActivity {
                     .show();
         }
 
-        if(id == R.id.action_logout_usuario){
+        if(id == R.id.action_logout_usuario) {
             builder.setMessage(R.string.mensagem_logout_confirmar)
                     .setTitle(R.string.mensagem_titulo_logout)
                     .setPositiveButton(R.string.mensagem_botao_confirmar, new DialogInterface.OnClickListener() {
@@ -157,6 +157,7 @@ public class ListAutomovelActivity extends ActionBarActivity {
                     .setNegativeButton(R.string.mensagem_botao_cancelar, null)
                     .show();
         }
+
         return super.onOptionsItemSelected(item);
     }
 

@@ -279,7 +279,7 @@ public class Database extends SQLiteOpenHelper{
         } catch (SQLException e) {
             Log.e("Erro ao deletar no BD", e.toString());
         }
-        deletarAllAutomovel(login);
+        deletarAllCustos(modelo,login);
     }
 
     // Deletar todos os automóveis de um usuário específico
@@ -287,6 +287,61 @@ public class Database extends SQLiteOpenHelper{
         String[] whereArgs = new String[]{login};
         try {
             getWritableDatabase().delete("automoveis", "login=?", whereArgs);
+        } catch (SQLException e) {
+            Log.e("Error deleteing job", e.toString());
+        }
+    }
+
+    /*
+    CUSTOS
+     */
+
+    // Adicionar custo
+    public void adicionarCusto(String data, float custo, String modelo, String login){
+
+        String sql =("SELECT * from custos where modelo = '"+modelo+"' AND login = '"+login+"'");
+        Cursor cursor = getReadableDatabase().rawQuery(sql, null);
+
+        int id = cursor.getCount()+1;
+
+        ContentValues entry = new ContentValues();
+        entry.put("id", id);
+        entry.put("data", data);
+        entry.put("custo", custo);
+        entry.put("modelo", modelo);
+        entry.put("login", login);
+
+        try {
+            getWritableDatabase().insert("custos", null, entry);
+        } catch (SQLException e) {
+            Log.e("Erro ao escrever no BD", e.toString());
+        }
+    }
+
+    // Listar custos
+    public ArrayList<String> listarCustos(String modelo, String login){
+
+        String sql =("SELECT * from custos where modelo = '"+modelo+"' AND login = '"+login+"'");
+        Cursor cursor = getReadableDatabase().rawQuery(sql, null);
+
+        // lista de custos
+        ArrayList<String> lista = new ArrayList<>();
+
+        // Preencher lista
+        if(cursor.getCount() != 0) {
+            cursor.moveToFirst();
+            do {
+                lista.add(cursor.getInt(cursor.getColumnIndex("id")) + "@" + cursor.getString(cursor.getColumnIndex("data"))+"@" + cursor.getFloat(cursor.getColumnIndex("custo")));
+            } while (cursor.moveToNext());
+        }
+        return lista;
+    }
+
+    // Deletar todos os custos de um automóvel
+    public void deletarAllCustos(String modelo,String login) {
+        String[] whereArgs = new String[]{modelo,login};
+        try {
+            getWritableDatabase().delete("custos", "modelo = ? AND login = ?", whereArgs);
         } catch (SQLException e) {
             Log.e("Error deleteing job", e.toString());
         }

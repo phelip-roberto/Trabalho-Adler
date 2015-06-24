@@ -16,7 +16,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 // Informações do automóvel
 public class InfoActivity extends ActionBarActivity {
@@ -48,8 +51,8 @@ public class InfoActivity extends ActionBarActivity {
 
         // TextView
         TextView text_tipo = (TextView) findViewById(R.id.text_tipo_info);
-        TextView text_marca = (TextView) findViewById(R.id.text_marca_info);
-        TextView text_modelo = (TextView) findViewById(R.id.text_modelo_info);
+        final TextView text_marca = (TextView) findViewById(R.id.text_marca_info);
+        final TextView text_modelo = (TextView) findViewById(R.id.text_modelo_info);
         TextView text_ano = (TextView) findViewById(R.id.text_ano_info);
         TextView text_cor = (TextView) findViewById(R.id.text_cor_info);
         TextView text_potencia = (TextView) findViewById(R.id.text_potencia_info);
@@ -166,6 +169,7 @@ public class InfoActivity extends ActionBarActivity {
                                 TextView txt_distancia = (TextView) view.findViewById(R.id.txt_distancia_gasto);
                                 TextView txt_preco = (TextView) view.findViewById(R.id.txt_preco_gasto);
 
+
                                 // Verificar se existem capos vazios
                                 if (txt_distancia.getText().toString().equals("") || txt_preco.getText().toString().equals("")) {
                                     Toast.makeText(getApplicationContext(), R.string.mensagem_campos_vazios, Toast.LENGTH_SHORT).show();
@@ -173,6 +177,13 @@ public class InfoActivity extends ActionBarActivity {
                                     float distancia = Float.parseFloat(txt_distancia.getText().toString());
                                     float preco = Float.parseFloat(txt_preco.getText().toString());
                                     float gasto = Formulas.gastos(distancia, consumo, preco);
+
+                                    // Obter data
+                                    String data = new SimpleDateFormat("dd/MM/yyyy - HH:mm").format(Calendar.getInstance().getTime());
+                                    String modelo = text_modelo.getText().toString();
+
+                                    // Adicionar novo custo
+                                    db.adicionarCusto(data,gasto,modelo,getLogin());
 
                                     // Exibir respostas
                                     AlertDialog.Builder builder2 = new AlertDialog.Builder(InfoActivity.this);
@@ -183,7 +194,7 @@ public class InfoActivity extends ActionBarActivity {
                                 }
                             }
                         })
-                        .setNegativeButton(R.string.mensagem_botao_calcular, null)
+                        .setNegativeButton(R.string.mensagem_botao_cancelar, null)
                         .show();
             }
         });
@@ -205,6 +216,7 @@ public class InfoActivity extends ActionBarActivity {
 
         // TextView
         final TextView text_consumo = (TextView) findViewById(R.id.text_consumo_info);
+        final TextView text_modelo = (TextView) findViewById(R.id.text_modelo_info);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(InfoActivity.this);
 
@@ -260,6 +272,16 @@ public class InfoActivity extends ActionBarActivity {
                     .setNegativeButton(R.string.mensagem_botao_cancelar, null)
                     .show();
         }
+
+        // Botão de relatório
+        if(id == R.id.action_relatorio_custo){
+            Intent relatorio = new Intent();
+            relatorio.setClass(InfoActivity.this,RelatorioCustosActivity.class);
+            relatorio.putExtra("MODELO",text_modelo.getText().toString());
+            relatorio.putExtra("LOGIN",getLogin());
+            startActivity(relatorio);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

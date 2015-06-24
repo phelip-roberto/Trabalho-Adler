@@ -7,4 +7,8 @@
 
     <item android:id="@+id/action_remover_automovel" android:title="@string/action_remover_automovel"
         android:orderInCategory="100" app:showAsAction="never" android:icon="@android:drawable/ic_menu_delete" />
+
+    <item android:id="@+id/action_relatorio_custo" android:title="@string/action_relatorio_custos"
+        android:orderInCategory="100" app:showAsAction="never" android:icon="@android:drawable/ic_menu_sort_by_size" />
+
 </menu>

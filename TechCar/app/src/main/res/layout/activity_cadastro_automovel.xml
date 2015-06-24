@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="CADASTRAR AUTOMÓVEL"
+            android:text="@string/text_titulo_cadastro_automovel"
             android:id="@+id/textView2"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"/>
@@ -41,7 +41,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="text"
             android:layout_weight="1"
-            android:hint="Modelo"
+            android:hint="@string/txt_modelo_hint"
             android:layout_marginTop="15dp" />
 
         <EditText
@@ -51,7 +51,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="numberSigned"
             android:layout_weight="1"
-            android:hint="Ano"
+            android:hint="@string/txt_ano_hint"
             android:layout_marginTop="15dp" />
 
         <EditText
@@ -61,7 +61,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="text"
             android:layout_weight="1"
-            android:hint="Cor"
+            android:hint="@string/txt_cor_hint"
             android:layout_marginTop="15dp" />
 
         <EditText
@@ -71,7 +71,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="numberDecimal"
             android:layout_weight="1"
-            android:hint="Potencia"
+            android:hint="@string/txt_potencia_hint"
             android:layout_marginTop="15dp" />
 
         <EditText
@@ -81,7 +81,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="numberDecimal"
             android:layout_weight="1"
-            android:hint="Consumo"
+            android:hint="@string/txt_consumo_hint"
             android:layout_marginTop="15dp" />
 
         <EditText
@@ -91,7 +91,7 @@
             android:layout_gravity="center_vertical"
             android:inputType="numberDecimal"
             android:layout_weight="1"
-            android:hint="Capacidade"
+            android:hint="@string/txt_capacidade_hint"
             android:layout_marginTop="15dp" />
 
         <Spinner

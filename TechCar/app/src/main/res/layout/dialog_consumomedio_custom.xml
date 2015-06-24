@@ -8,6 +8,6 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:id="@+id/txt_distancia_consumomedio"
-        android:hint="Distância percorrida(km)"/>
+        android:hint="@string/txt_distancia_hint"/>
 
 </LinearLayout>

@@ -17,7 +17,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Informações sobre o veículo"
+                android:text="@string/text_titulo_info_veiculo"
                 android:id="@+id/textView5"
                 android:layout_gravity="center_horizontal"/>
 
@@ -32,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Tipo: "
+                    android:text="@string/text_tipo"
                     android:layout_weight="1"
                     android:textStyle="bold" />
 
@@ -55,9 +55,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Marca: "
+                    android:text="@string/text_marca"
                     android:layout_weight="1"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Modelo: "
+                    android:text="@string/text_modelo"
                     android:layout_weight="1"
                     android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Ano: "
+                    android:text="@string/text_ano"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -126,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Cor: "
+                    android:text="@string/text_cor"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -150,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Potência: "
+                    android:text="@string/text_potencia"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Consumo: "
+                    android:text="@string/text_consumo"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -198,7 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Capacidade: "
+                    android:text="@string/text_capacidade"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -222,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Hardware: "
+                    android:text="@string/text_harware"
                     android:layout_weight="1"
                     android:textStyle="bold"/>
 
@@ -240,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Informações"
+                android:text="@string/text_info"
                 android:id="@+id/textView6"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"/>
@@ -248,19 +248,19 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Nível do tanque"
+                android:text="@string/bt_niveltanque"
                 android:id="@+id/bt_niveltanque" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Previsão do consumo"
+                android:text="@string/bt_consumo"
                 android:id="@+id/bt_consumo" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Previsão de gastos"
+                android:text="@string/bt_gasto"
                 android:id="@+id/bt_gastos" />
 
         </LinearLayout>

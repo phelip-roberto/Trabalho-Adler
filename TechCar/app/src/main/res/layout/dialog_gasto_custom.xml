@@ -9,14 +9,14 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:id="@+id/txt_distancia_gasto"
-        android:hint="Distância percorrida(km)"/>
+        android:hint="@string/txt_distancia_hint"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:id="@+id/txt_preco_gasto"
-        android:hint="Preço"/>
+        android:hint="@string/txt_preco_hint"/>
 
 
 

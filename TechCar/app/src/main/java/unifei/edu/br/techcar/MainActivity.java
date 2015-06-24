@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class MainActivity extends ActionBarActivity {
 
     // Tempo de splash
-    private final int SPLASH_DISPLAY_TIME=3000;
+    private final int SPLASH_DISPLAY_TIME=1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

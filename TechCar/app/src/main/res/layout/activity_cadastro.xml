@@ -26,14 +26,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/txt_nome_cad"
             android:layout_marginTop="15dp"
-            android:hint="Nome"
+            android:hint="@string/txt_nome_hint"
             android:singleLine="true" />
 
         <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_login_cad"
-        android:hint="Login"
+        android:hint="@string/txt_login_hint"
             android:layout_marginTop="25dp"
             android:singleLine="true" />
 
@@ -43,7 +43,7 @@
             android:inputType="textPassword"
             android:id="@+id/txt_senha_cad"
             android:layout_marginTop="15dp"
-            android:hint="Senha"
+            android:hint="@string/txt_senha_hint"
             android:singleLine="true" />
 
 
@@ -54,7 +54,7 @@
         android:ems="10"
         android:id="@+id/txt_nascimento_cad"
         android:layout_marginTop="15dp"
-        android:hint="Data de Nascimento"
+        android:hint="@string/txt_nascimento_hint"
         android:singleLine="true" />
 
         <EditText
@@ -63,7 +63,7 @@
             android:inputType="number"
             android:id="@+id/txt_cpf_cad"
             android:layout_marginTop="15dp"
-            android:hint="CPF"
+            android:hint="@string/txt_cpf_hint"
             android:singleLine="true" />
 
         <EditText
@@ -72,7 +72,7 @@
             android:inputType="textEmailAddress"
             android:id="@+id/txt_email_cad"
             android:layout_marginTop="15dp"
-            android:hint="Email"
+            android:hint="@string/txt_email_hint"
             android:singleLine="true" />
 
         <EditText
@@ -81,7 +81,7 @@
             android:id="@+id/txt_tel_cad"
             android:layout_marginTop="15dp"
             android:inputType="number"
-            android:hint="Telefone"
+            android:hint="@string/txt_telefone_hint"
             android:singleLine="true" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

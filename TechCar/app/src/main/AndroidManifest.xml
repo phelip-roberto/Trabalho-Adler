@@ -7,7 +7,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -17,13 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LoginActivity"
             android:label="Login"
             android:theme="@style/AppTheme" >
         </activity>
-
         <activity
             android:name=".CadastroActivity"
             android:label="@string/title_activity_cadastro" >
@@ -31,12 +28,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity" />
         </activity>
-
         <activity
             android:name=".ListAutomovelActivity"
             android:label="@string/title_activity_list_automovel" >
         </activity>
-
         <activity
             android:name=".CadastroAutomovelActivity"
             android:label="@string/title_activity_cadastro_automovel"
@@ -45,7 +40,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="unifei.edu.br.techcar.ListAutomovelActivity" />
         </activity>
-
         <activity
             android:name=".InfoActivity"
             android:label="@string/title_activity_info"
@@ -54,7 +48,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="unifei.edu.br.techcar.ListAutomovelActivity" />
         </activity>
-
         <activity
             android:name=".EquipeActivity"
             android:label="@string/title_activity_equipe"
@@ -63,7 +56,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="unifei.edu.br.techcar.LoginActivity" />
         </activity>
-
+        <activity
+            android:name=".RelatorioCustosActivity"
+            android:label="@string/title_activity_relatorio_custos"
+            android:parentActivityName=".ListAutomovelActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="unifei.edu.br.techcar.ListAutomovelActivity" />
+        </activity>
     </application>
 
 </manifest>

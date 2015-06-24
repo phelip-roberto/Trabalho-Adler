@@ -10,7 +10,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/txt_senha_alterar"
-        android:hint="Senha"/>
+        android:hint="@string/txt_senha_hint"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/txt_email_alterar"
-        android:hint="Email"/>
+        android:hint="@string/txt_email_hint"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -26,5 +26,5 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/txt_telefone_alterar"
-        android:hint="Telefone"/>
+        android:hint="@string/txt_telefone_hint"/>
 </LinearLayout>

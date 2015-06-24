@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_cor_alterar_automovel"
-        android:hint="Cor"/>
+        android:hint="@string/txt_cor_hint"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/txt_potencia_alterar_automovel"
-        android:hint="Potência"/>
+        android:hint="@string/txt_potencia_hint"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -24,6 +24,6 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/txt_consumo_alterar_automovel"
-        android:hint="Consumo"/>
+        android:hint="@string/txt_consumo_hint"/>
 
 </LinearLayout>

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tech Car"
+        android:text="@string/text_titulo_login"
         android:id="@+id/textView"
         android:textColor="#000000"
         android:textSize="50dp"
@@ -27,7 +27,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="Usuário"
+        android:hint="@string/txt_login_hint"
         android:singleLine="true"
         />
 
@@ -41,14 +41,14 @@
         android:layout_alignStart="@+id/txt_usuario"
         android:layout_alignRight="@+id/txt_usuario"
         android:layout_alignEnd="@+id/txt_usuario"
-        android:hint="Senha"
+        android:hint="@string/txt_senha_hint"
         android:singleLine="true"
         />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar"
+        android:text="@string/bt_entrar"
         android:id="@+id/bt_entrar"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -57,7 +57,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
+        android:text="@string/bt_cadastrar"
         android:id="@+id/bt_cadastrar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
